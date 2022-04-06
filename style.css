@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to left, #3a2d80, #a763f6);
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 60px);
+  gap: 5px;
+  grid-template-rows: minmax(120px auto) repeat(5, 100px);
+}
+
+.grid-container > button {
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 45px;
+  border: 1px solid #3a2d80b9;
+  outline: none;
+  background-color: #3a2d80;
+  color: #fff;
+  
+}
+
+.grid-container > button:hover {
+  color: #3a2d80;
+  background-color: #a763f6;
+}
+
+.grid-container > .operator {
+  background-color: #a763f6;
+}
+.bigger {
+  grid-column: span 2;
+}
+
+.grid-container .output {
+  grid-column: 1 / -1;
+  background-color: #241a30;
+  color: #fff;
+  display: flex;
+  height: 70px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid-container > .output > .prev-op {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.grid-container > .output > .current-op {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.prev-op, .current-op {
+   height: 100%;
+   width: 100%;
+}
+
